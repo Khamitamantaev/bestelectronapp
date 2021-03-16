@@ -8,11 +8,13 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "asar": "^3.0.3",
     "bootstrap": "^4.6.0",
     "concurrently": "^6.0.0",
     "electron": "^12.0.1",
     "electron-builder": "^22.10.5",
     "electron-is-dev": "^2.0.0",
+    "electron-packager": "^15.2.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.1",
@@ -26,7 +28,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "ebuild": "npm run build && node_modules/.bin/build"
+    "ebuild": "npm run build && node_modules/.bin/build",
+    "package-win": "electron-packager . electron-khamit-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/icons.png --prune=true --out=release-here --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Rodoslovnaya App\""
   },
   "eslintConfig": {
     "extends": [
